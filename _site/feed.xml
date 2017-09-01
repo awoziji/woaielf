@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ZY | 数林觅风</title>
+    <description></description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 01 Sep 2017 20:29:05 +0800</pubDate>
+    <lastBuildDate>Fri, 01 Sep 2017 20:29:05 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>【笔记】Python（九）爬虫常用库</title>
+        <description>
+Python 在爬虫领域有非常广泛的应用，本文基于常用的几个 Python 库：Requests，BeautifulSoup，Scrapy，可以做一个快速的入门。暂时没有涉及 js 处理，表单提交，验证码等更高阶的内容。后续随进一步学习会继续深入。
+
+</description>
+        <pubDate>Wed, 21 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/21/spider/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/21/spider/</guid>
+        
+        <category>Python</category>
+        
+        
+        <category>编程之魅</category>
+        
+      </item>
+    
+      <item>
+        <title>【汇总】Python 编程核心知识体系</title>
+        <description>
+本文主要涵盖了 Python 编程的核心知识（暂不包括标准库及第三方库，后续会发布相应专题的文章）。
+&lt;ol&gt;
+  &lt;li&gt;首先，按顺序依次展示了以下内容的一系列思维导图：&lt;strong&gt;基础知识，数据类型（数字，字符串，列表，元组，字典，集合），条件&amp;amp;循环，文件对象，错误&amp;amp;异常，函数，模块，面向对象编程&lt;/strong&gt;；&lt;/li&gt;
+  &lt;li&gt;接着，结合这些思维导图主要参考的资料，分享一下我的学习体验，一方面可供初学者参考，另一方面，也便于大家结合思维导图深入学习、理解、思考；&lt;/li&gt;
+  &lt;li&gt;最后，提供几篇文章链接，方便希望从 Python 2.x 迁移到 3.x 的朋友理解。&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;strong&gt;笔者虽为一枚医学生，正是从学习 Python 起步，开启了数据科学新世界的大门。编程是这样一件美妙的事情，如果你没有开始，你不知道会错过一种多么棒的体验。Just try it~和大家共勉！&lt;/strong&gt;
+
+</description>
+        <pubDate>Tue, 13 Jun 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/06/13/python3-all/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/06/13/python3-all/</guid>
+        
+        <category>Python</category>
+        
+        
+        <category>编程之魅</category>
+        
+      </item>
+    
+      <item>
+        <title>【笔记】Python（八）常用扩展库</title>
+        <description>
+本文是对常用的 Python 扩展库的一个总结，主要以标准库为主，后续会随着进一步学习继续更新。
+
+</description>
+        <pubDate>Sun, 28 May 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/05/28/lib-1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/28/lib-1/</guid>
+        
+        <category>Python</category>
+        
+        
+        <category>编程之魅</category>
+        
+      </item>
+    
+      <item>
+        <title>【实战】电商数据篇（二）MySQL 实战指南</title>
+        <description>
+&lt;strong&gt;本文是电商数据实战系列第二篇。&lt;/strong&gt;关于数据的情况，请参考&lt;a href=&quot;https://woaielf.github.io/2017/05/20/jdata-predeal/&quot;&gt;【实战】电商数据篇（一）数据初探&lt;/a&gt;。
+
+本篇中，我主要是为了解决以下的问题：
+&lt;ul&gt;
+  &lt;li&gt;MySQL 建表&lt;/li&gt;
+  &lt;li&gt;练习 SQL 查询：通过提问——解答的模式
+&lt;strong&gt;本文不是以解决数据模型问题为中心，更多的是对之前 SQL&amp;amp;MySQL 学习的演练。可以根据需要跳过部分章节，不影响后续数据处理的理解。&lt;/strong&gt;可通过&lt;a href=&quot;https://woaielf.github.io/2017/05/04/sql/&quot;&gt;【笔记】SQL &amp;amp; MySQL&lt;/a&gt; 回顾基础知识。&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Thu, 25 May 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/05/25/jdata-mysql/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/25/jdata-mysql/</guid>
+        
+        <category>实例分析</category>
+        
+        
+        <category>数据科学</category>
+        
+      </item>
+    
+      <item>
+        <title>【实战】电商数据篇（一）数据初探</title>
+        <description>
+&lt;strong&gt;本文是电商数据实战系列第一篇。&lt;/strong&gt;
+数据来源：&lt;a href=&quot;http://www.datafountain.cn/#/competitions/247/intro/&quot;&gt;京东JData算法大赛-高潜用户购买意向预测&lt;/a&gt;。数据集以京东商城真实的用户、商品和行为数据（脱敏后）为基础。一直苦于缺乏实践，正好拿这个项目练练手。接下来的几篇实战博文，我会尽可能仔细的写下一些体会，结合之前学习的数据分析工具（以Python及相关包为主），探索一下电商数据的世界。由于本人也是数据分析的小白，希望在实践中和大家一起成长。
+
+</description>
+        <pubDate>Sat, 20 May 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/05/20/jdata-predeal/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/20/jdata-predeal/</guid>
+        
+        <category>实例分析</category>
+        
+        
+        <category>数据科学</category>
+        
+      </item>
+    
+      <item>
+        <title>【笔记】SQL &amp; MySQL</title>
+        <description>
+这篇笔记包括了&lt;strong&gt;基本的 SQL 语法&lt;/strong&gt;，具体应用的 RDBMS 以 MySQL 为例，也会穿插一点点数据库的知识。最后讲了一下&lt;strong&gt;如何利用第三方库，结合 Python 使用 MySQL&lt;/strong&gt;。
+
+</description>
+        <pubDate>Thu, 04 May 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/05/04/sql/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/05/04/sql/</guid>
+        
+        <category>SQL</category>
+        
+        <category>MySQL</category>
+        
+        
+        <category>编程之魅</category>
+        
+      </item>
+    
+      <item>
+        <title>【笔记】Python（七）数据可视化之「Matplotlib」</title>
+        <description>
+Python 有非常丰富的第三方绘图库，matplotlib 使用起来也许并不是很便捷，因为图上每个元素都需要自己来定制。但仔细体会 matplotlib 背后的设计思想是很有趣的事情。seaborn 之类的绘图库是基于 matplotlib 封装的，因而后期需要自己灵活定制图形时就大大受用了。本文的两幅思维导图是基于两种不同的思路绘制的，偶有内容交叉，日常使用可以选择自己熟悉的方式（网上的教程大多是基于过程的函数式编程，即 pyplot 方法）。&lt;strong&gt;建议配合最后附上出的参考资料学习&lt;/strong&gt;。
+
+</description>
+        <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/04/27/matplotlib/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/27/matplotlib/</guid>
+        
+        <category>Python</category>
+        
+        <category>Matplotlib</category>
+        
+        
+        <category>编程之魅</category>
+        
+      </item>
+    
+      <item>
+        <title>【笔记】Python（六）数值计算库之「Pandas」</title>
+        <description>
+Pandas 提供了数据结构——DataFrame，可以高效的处理一些数据分析任务。我们日常分析的数据，大多是存储在类似 excel 的数据表中，Pandas 可以灵活的按列或行处理数据，几乎是最常用的工具了。
+
+</description>
+        <pubDate>Sat, 22 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/04/22/Pandas/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/22/Pandas/</guid>
+        
+        <category>Python</category>
+        
+        <category>Pandas</category>
+        
+        
+        <category>编程之魅</category>
+        
+      </item>
+    
+      <item>
+        <title>【笔记】Python（五）数值计算库之「NumPy」</title>
+        <description>
+NumPy 主要提供了&lt;strong&gt;矢量化数组运算&lt;/strong&gt;的方法。通过将条件逻辑写成数组表达式，可以极大的简化代码（比如原先需要多个 if-else 分支循环才能实现的运算）。NumPy 的数据结构用于处理矩阵，是很多其他数值分析库的基础。
+
+</description>
+        <pubDate>Sat, 15 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/04/15/numpy/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/15/numpy/</guid>
+        
+        <category>Python</category>
+        
+        <category>NumPy</category>
+        
+        
+        <category>编程之魅</category>
+        
+      </item>
+    
+      <item>
+        <title>【笔记】机器学习（六）分类方法-理论篇</title>
+        <description>
+本文是我的「ML&amp;amp;DM 笔记」第六篇。应部分朋友的来信请求，先分享这部分与「分类」有关笔记。机器学习的这块知识体系非常庞大，部分知识可能深入不够，暂时仅供大家参考，我也还需要时间来更细致的学习。后续我会结合案例，单篇逐个进行讲解（可能需要的时间周期较长）。本文目前包括的理论包括&lt;strong&gt;决策树，规则分类器，最近邻方法，贝叶斯分类器，人工神经网络，支持向量机，集成学习以及不平衡类和多类问题&lt;/strong&gt;。
+
+</description>
+        <pubDate>Thu, 06 Apr 2017 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2017/04/06/dm-6/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/04/06/dm-6/</guid>
+        
+        <category>机器学习/数据挖掘</category>
+        
+        
+        <category>数据科学</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>【总结】Trim Galore用法及参数考量</title>
+    <meta name="description" content="Trim Galore是一个非常流行的用于「去接头序列」的软件，用于处理高通量测序得到的原始数据。通常我们从测序公司拿到数据后，第一步就是评估数据的质量以及对raw data去接头处理。公司拿来的数据通常附带了clean data以及去接头的说明文件，我自己重新实现了一下trim的过程。参数都是根据公司的说明文件...">
+
+    <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico?" type="image/x-icon">
+    <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css ">
+    <link rel="stylesheet" href="/css/main.css ">
+    <link rel="canonical" href="http://localhost:4000/2016/11/18/trim-galore/">
+    <link rel="alternate" type="application/rss+xml" title="ZY | 数林觅风" href="http://localhost:4000/feed.xml ">
+
+
+    <script>
+    // 百度统计代码
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?cf8506e0ef223e57ff6239944e5d46a4";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
+
+
+</head>
+
+
+  <body>
+
+    <header id="top">
+    <div class="wrapper">
+        <a href="/" class="brand">ZY | 数林觅风</a>
+        <small>Data Science & MindMap</small>
+        <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
+        <nav id="headerNav">
+            <ul>
+                <li>
+                    
+                    <a href="/">
+                    
+                        <i class="fa fa-home"></i>Home
+                    </a>
+                </li>
+
+                
+                    
+                    <li>
+                        
+                        <a href="/archive/">
+                        
+                            <i class="fa fa-archive"></i>Archives
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/category/">
+                        
+                            <i class="fa fa-th-list"></i>Categories
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/tag/">
+                        
+                            <i class="fa fa-tags"></i>Tags
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/collection/">
+                        
+                            <i class="fa fa-bookmark"></i>Collections
+                        </a>
+                    </li>
+                    
+                
+                    
+                    <li>
+                        
+                        <a href="/about/">
+                        
+                            <i class="fa fa-heart"></i>About
+                        </a>
+                    </li>
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+                    
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+        <div class="page clearfix" post>
+    <div class="left">
+        <h1>【总结】Trim Galore用法及参数考量</h1>
+
+        <div class="label">
+
+            <div class="label-card">
+                <i class="fa fa-calendar"></i>2016-11-18
+            </div>
+
+            <div class="label-card">
+                <i class="fa fa-user"></i>ZY
+                
+            </div>
+
+            <div class="label-card">
+                
+            </div>
+
+            <div class="label-card">
+            
+
+
+<!-- <span class="point">•</span> -->
+<span class="categories">
+  <i class="fa fa-th-list"></i>
+  
+    
+        <a href="/category/#生物信息" title="Category: 生物信息" rel="category">生物信息</a>
+    
+  
+
+  <!-- <span class="point">•</span> -->
+</span>
+
+
+            </div>
+
+            <div class="label-card">
+            
+<!-- <span class="point">•</span> -->
+<span class="pageTag">
+  <i class="fa fa-tags"></i>
+  
+    
+        <!--a href="/tag/#%E7%94%9F%E4%BF%A1%E8%BD%AF%E4%BB%B6" title="Tag: 生信软件" rel="tag">生信软件</a-->
+        <a href="/tag/#生信软件" title="Tag: 生信软件" rel="tag">生信软件</a>&nbsp;
+    
+        <!--a href="/tag/#NGS" title="Tag: NGS" rel="tag">NGS</a-->
+        <a href="/tag/#NGS" title="Tag: NGS" rel="tag">NGS</a>
+    
+  
+
+</span>
+
+            </div>
+
+        </div>
+        <hr>
+        <article itemscope itemtype="http://schema.org/BlogPosting">
+        <ul id="markdown-toc">
+  <li><a href="#软件说明" id="markdown-toc-软件说明">软件说明</a>    <ul>
+      <li><a href="#版本信息" id="markdown-toc-版本信息">版本信息</a></li>
+      <li><a href="#依赖环境" id="markdown-toc-依赖环境">依赖环境</a></li>
+      <li><a href="#软件安装" id="markdown-toc-软件安装">软件安装</a></li>
+      <li><a href="#参数概览" id="markdown-toc-参数概览">参数概览</a></li>
+    </ul>
+  </li>
+  <li><a href="#案例分析" id="markdown-toc-案例分析">案例分析</a>    <ul>
+      <li><a href="#测序数据" id="markdown-toc-测序数据">测序数据</a></li>
+      <li><a href="#代码展示" id="markdown-toc-代码展示">代码展示</a></li>
+      <li><a href="#软件输出" id="markdown-toc-软件输出">软件输出</a></li>
+    </ul>
+  </li>
+  <li><a href="#参考资料" id="markdown-toc-参考资料">参考资料</a></li>
+  <li><a href="#update-log" id="markdown-toc-update-log">Update Log</a></li>
+</ul>
+
+<p>Trim Galore是一个非常流行的用于「去接头序列」的软件，用于处理<strong>高通量测序得到的原始数据</strong>。通常我们从测序公司拿到数据后，第一步就是<strong>评估数据的质量以及对raw data去接头处理</strong>。公司拿来的数据通常附带了clean data以及去接头的说明文件，我自己重新实现了一下trim的过程。参数都是根据公司的说明文件来设定的。</p>
+
+<h2 id="软件说明">软件说明</h2>
+
+<h3 id="版本信息">版本信息</h3>
+<ol>
+  <li>Trim Galore version: 0.4.1</li>
+  <li>Cutadapt version: 1.11</li>
+  <li>FastQC version：0.11.3</li>
+</ol>
+
+<h3 id="依赖环境">依赖环境</h3>
+<ol>
+  <li><a href="http://www.bioinformatics.bbsrc.ac.uk/projects/fastqc/">FastQC</a></li>
+  <li><a href="https://pypi.python.org/pypi/cutadapt/">Cutadapt</a></li>
+</ol>
+
+<h3 id="软件安装">软件安装</h3>
+<p>Trim Galore直接在<a href="http://www.bioinformatics.bbsrc.ac.uk/projects/download.html#trim_galore">官网</a>下载解压后即可使用（perl文件，无需任何安装）。<br /></p>
+
+<h3 id="参数概览">参数概览</h3>
+<p>这里只讨论了<font color="red">部分参数</font>（与我的数据相关的部分，数据情况请参照下面）。其余参数的设定可以参考「官方文档」（<a href="http://www.bioinformatics.bbsrc.ac.uk/projects/trim_galore/">Trim_Galore_User_Guide</a>）。</p>
+
+<ul>
+  <li>-q/–quality <INT>：控制的质量分数阈值</INT></li>
+  <li>–length <INT>：丢弃小于此长度的读段</INT></li>
+  <li>-e：允许的错误率</li>
+  <li>–stringency：限定最少与adaptor序列重叠的碱基数（用来trim的标准）</li>
+  <li>-o：输出文件路径</li>
+</ul>
+
+<h2 id="案例分析">案例分析</h2>
+
+<h3 id="测序数据">测序数据</h3>
+<p>Illumina Hiseq3000 <br /> 
+Paired-end RNA-seq</p>
+
+<h3 id="代码展示">代码展示</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>/.../trim_galore /.../*_R1.fastq /.../*_R2.fastq -q 25 --length 50 -e 0.1 --stringency 5 -o /.../ -a adapter1 -a2 adapter2 --paired
+</code></pre>
+</div>
+
+<h3 id="软件输出">软件输出</h3>
+<blockquote>
+  <p>Trimming mode: paired-end
+<br />Trim Galore version: 0.4.1
+<br />Cutadapt version: 1.11
+<br />Quality Phred score cutoff: 25
+<br />Quality encoding type selected: ASCII+33
+<br />Adapter sequence: …
+<br />Maximum trimming error rate: 0.1 (default)
+<br />Optional adapter 2 sequence (only used for read 2 of paired-end files): …
+<br />Minimum required adapter overlap (stringency): 5 bp
+<br />Minimum required sequence length for both reads before a sequence pair gets removed: 50 bp</p>
+</blockquote>
+
+<h2 id="参考资料">参考资料</h2>
+<blockquote>
+  <p><a href="http://www.bioinformatics.bbsrc.ac.uk/projects/trim_galore/">http://www.bioinformatics.bbsrc.ac.uk/projects/trim_galore/</a></p>
+</blockquote>
+
+<h2 id="update-log">Update Log</h2>
+<ul>
+  <li>2016/11/18</li>
+</ul>
+
+        </article>
+        <hr>
+
+        
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+                
+                    
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+                    
+                
+            
+        
+        
+
+        <div class="post-recent">
+    <div class="pre">
+        
+        <p><strong>上一篇</strong> <a href="/2016/11/16/RNA-seq/">【文献】RNA-seq分析流程</a></p>
+        
+    </div>
+    <div class="nex">
+
+        
+        <p><strong>下一篇</strong> <a href="/2016/11/25/CLIP-CHIP/">【文献】CLIP-seq&CHIP-seq分析流程</a></p>
+        
+    </div>
+</div>
+
+
+        <!-- <h2>关于我</h2>
+        本人是某医学院研究生一枚，<b>2018年7月应届毕业</b>。本硕均为医学背景，研究生阶段因学习生物信息接触到数据科学，自此爱上了编程，开始漫漫自学之路。可通过「<a href="https://woaielf.github.io/2016/09/11/data-science/">数据科学技能树</a>」了解我目前关注的领域。除此之外，我的研究生课题<b>涉及网站平台开发，故对 HTML/CSS/JQuery/PHP/MySQL 有一定了解</b>。如果您对我感兴趣，<b>愿意推荐我一份「数据分析」相关的实习/工作机会（靶标：上海/杭州）</b>，可联系我：zylovedata@163.com。非常感谢！ -->
+
+        <!-- <h2 id="comments">Comments</h2>
+        
+
+
+ -->
+
+
+    </div>
+    <button class="anchor"><i class="fa fa-anchor"></i></button>
+    <div class="right">
+        <div class="wrap">
+
+            <!-- Content -->
+            <div class="side content">
+                <div>
+                    Content
+                </div>
+                <ul id="content-side" class="content-ul">
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    <!-- <li><a href="#comments">Comments</a></li> -->
+                </ul>
+            </div>
+            <!-- 其他div框放到这里 -->
+            <!-- <div class="side">bbbb</div> -->
+        </div>
+    </div>
+</div>
+<script>
+/**
+ * target _blank
+ */
+(function() {
+    var aTags = document.querySelectorAll('article a:not([id])')
+    for (var i = 0; i < aTags.length; i++) {
+        aTags[i].setAttribute('target', '_blank')
+    }
+}());
+</script>
+<script src="/js/pageContent.js " charset="utf-8"></script>
+
+
+    <footer class="site-footer">
+
+
+    <div class="wrapper">
+
+        <p class="description">
+             「数据科学思维导图笔记」 
+        </p>
+        <p class="contact">
+            Contact me at: 
+            <a href="https://github.com/woaielf" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
+            <a href="mailto:zhaoyueelf@163.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>        
+        </p>
+        <p>
+            本站总访问量<span id="busuanzi_value_site_pv"></span>次，本站访客数<span id="busuanzi_value_site_uv"></span>人次，本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+        </p>
+        <p class="power">
+            <span>
+                Site powered by <a href="https://jekyllrb.com/">Jekyll</a> & <a href="https://pages.github.com/">Github Pages</a>.
+            </span>
+            <span>
+                Theme designed by <a href="https://github.com/Gaohaoyang">HyG</a>.
+            </span>
+        </p>
+    </div>
+</footer>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div style="display:none;">   
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260843486'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s4.cnzz.com/z_stat.php%3Fid%3D1260843486' type='text/javascript'%3E%3C/script%3E"));</script>
+</div>
+
+    <div class="back-to-top">
+    <a href="#top" class="scroll">
+        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+    </a>
+</div>
+
+    <script src=" /js/main.js " charset="utf-8"></script>
+    <script src=" /js/scroll.min.js " charset="utf-8"></script>
+  </body>
+
+</html>
