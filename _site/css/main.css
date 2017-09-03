@@ -24,7 +24,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-weight: normal; }
+  font-weight: 400; }
 
 html {
   height: 100%; }
@@ -50,30 +50,28 @@ hr {
   margin: 20px 0; }
 
 h1 {
-  font-size: 36px; }
+  font-size: 30px; }
 
 h2 {
-  font-size: 30px;
-  border-bottom: 1px solid #eee; }
+  font-size: 26px;
+  border-bottom: 1px solid #eee;
+  margin: 50px 0 25px; }
 
 h3 {
-  font-size: 26px; }
+  font-size: 23px;
+  margin: 50px 0 20px; }
 
 h4 {
-  font-size: 22px; }
+  font-size: 19px;
+  margin: 30px 0 10px; }
 
 h5 {
-  font-size: 20px; }
-
-h6 {
-  font-size: 18px; }
-
-h2,
-h3,
-h4,
-h5,
-h6 {
+  font-size: 17px;
   margin: 20px 0 10px; }
+
+h6 {
+  font-size: 16px;
+  margin: 10px 0 5px; }
 
 blockquote {
   color: #444;
@@ -368,7 +366,6 @@ header {
       -ms-word-break: break-all;
       word-break: break-all;
       /* Non standard for webkit */
-      word-break: break-word;
       -webkit-hyphens: auto;
       -moz-hyphens: auto;
       -ms-hyphens: auto;
@@ -452,9 +449,14 @@ header {
       transform: scale(0.1);
       transition: 0.2s cubic-bezier(0.5, 0.1, 0.51, 1.38); }
     .page .right-show {
+      z-index: 999;
       visibility: visible;
       opacity: 1;
-      transform: scale(1); } }
+      transform: scale(1); }
+      .page .right-show .content-ul {
+        margin-bottom: 0; }
+        .page .right-show .content-ul > li:last-of-type {
+          margin-bottom: 16px; } }
 /**
  * Syntax highlighting styles
  */
@@ -836,6 +838,11 @@ pre {
         margin: 0;
         padding: 0 8px;
         font-size: 14px; }
+
+.deep {
+  transition: 0.32s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+  transform-style: preserve-3d;
+  transform: perspective(1600px) rotateX(14deg) translateZ(-200px); }
 
 .site-footer {
   position: absolute;

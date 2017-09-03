@@ -3,6 +3,7 @@ layout: default
 title: Archives
 permalink: /archive/
 icon: archive
+type: page
 ---
 
 <!-- <h1>Archive of posts with {{ page.type }} '{{ page.title }}'</h1> -->
@@ -11,8 +12,6 @@ icon: archive
 <div class="page clearfix">
     <div class="left">
         <h1>{{page.title}}</h1>
-        <small><i>从这里开始阅读:</i><a href="https://woaielf.github.io/2016/09/11/data-science/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「数据科学技能树」</a></small>
-      <!--   <small><b>系列博文:</b><a href="https://woaielf.github.io/2016/09/06/blog-begin/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「博客概览」</a><a href="https://woaielf.github.io/2016/09/11/data-science/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「数据科学」</a><a href="https://woaielf.github.io/2016/09/09/python/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「Python」</a><a href="https://woaielf.github.io/2016/09/08/r/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「R」</a><a href="https://woaielf.github.io/2016/09/10/ML&DM/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「ML&DM」</a></small> -->
         <hr>
         <ul>
           {% for post in site.posts %}
@@ -31,7 +30,7 @@ icon: archive
                 <time>
                 {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                 </time>
-                <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+                <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 
                 {% include category.html %}
                 {% include tag.html %}
@@ -56,7 +55,7 @@ icon: archive
                           {% assign prevyear = post.previous.date | date: "%Y" %}
                           {% assign counter = counter | plus: 1 %}
                           {% if thisyear != prevyear %}
-                            <li><a class="scroll" href="#y{{ post.date | date: '%Y' }}">{{ thisyear }} ({{ counter }})</a></li>
+                            <li><a data-scroll href="#y{{ post.date | date: '%Y' }}">{{ thisyear }} ({{ counter }})</a></li>
                             {% assign counter = 0 %}
                           {% endif %}
                         {% endfor %}

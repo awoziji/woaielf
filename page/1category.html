@@ -3,14 +3,13 @@ layout: default
 title: Categories
 permalink: /category/
 icon: th-list
+type: page
 ---
 
 
 <div class="page clearfix">
     <div class="left">
         <h1>{{page.title}}</h1>
-        <small><i>从这里开始阅读:</i><a href="https://woaielf.github.io/2016/09/11/data-science/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「数据科学技能树」</a></small>
-        <!-- <small><b>系列博文:</b><a href="https://woaielf.github.io/2016/09/06/blog-begin/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「博客概览」</a><a href="https://woaielf.github.io/2016/09/11/data-science/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「数据科学」</a><a href="https://woaielf.github.io/2016/09/09/python/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「Python」</a><a href="https://woaielf.github.io/2016/09/08/r/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「R」</a><a href="https://woaielf.github.io/2016/09/10/ML&DM/" style="color: #4d6dad;transition: all 0.5s ease 0s;">「ML&DM」</a></small> -->
         <hr>
         <ul>
             {% for category in site.categories %}
@@ -22,7 +21,7 @@ icon: th-list
                             <time>
                             {{ post.date | date:"%F" }} {{ post.date | date: "%a" }}.
                             </time>
-                            <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+                            <a class="title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
 
                             {% include category.html %}
                             {% include tag.html %}
@@ -45,7 +44,7 @@ icon: th-list
                 <ul id="content-side" class="content-ul">
                     {% for category in site.categories%}
                         <li>
-                            <a class="scroll" href="#{{ category | first }}">
+                            <a data-scroll href="#{{ category | first }}">
                                 {{ category | first }} ({{ category | last | size }})
                             </a>
                         </li>

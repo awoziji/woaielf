@@ -1,204 +1,294 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>lzx704 | 蓝坠星</title>
+    <title>HyG</title>
     <description></description>
     <link>http://localhost:4000/</link>
     <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 03 Sep 2017 17:06:53 +0800</pubDate>
-    <lastBuildDate>Sun, 03 Sep 2017 17:06:53 +0800</lastBuildDate>
+    <pubDate>Sun, 03 Sep 2017 20:45:37 +0800</pubDate>
+    <lastBuildDate>Sun, 03 Sep 2017 20:45:37 +0800</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
     
       <item>
-        <title>【笔记】Python（九）爬虫常用库</title>
+        <title>前端如何写一个精确的倒计时</title>
         <description>
-Python 在爬虫领域有非常广泛的应用，本文基于常用的几个 Python 库：Requests，BeautifulSoup，Scrapy，可以做一个快速的入门。暂时没有涉及 js 处理，表单提交，验证码等更高阶的内容。后续随进一步学习会继续深入。
+关于写倒计时大家可能都都比较熟悉，使用 setTimeout 或 setInterval 就可以搞定。几秒钟或者几分钟的倒计时这样写没有问题，但是如果是长时间的倒计时，这样写就会不准确。如果用户修改了他的设备时间，这样的倒计时就没有意义了。今天就说说写一个精确的倒计时的方法。
+
+&lt;img src=&quot;https://img.alicdn.com/tfs/TB18QnlOpXXXXcVXpXXXXXXXXXX-388-256.png&quot; alt=&quot;&quot; /&gt;
 
 </description>
-        <pubDate>Wed, 21 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/06/21/spider/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/06/21/spider/</guid>
+        <pubDate>Fri, 25 Nov 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/11/25/how-to-write-a-count-down/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/11/25/how-to-write-a-count-down/</guid>
         
-        <category>Python</category>
+        <category>countdown</category>
+        
+        <category>JavaScript</category>
         
         
-        <category>编程之魅</category>
+        <category>JavaScript</category>
         
       </item>
     
       <item>
-        <title>【汇总】Python 编程核心知识体系</title>
-        <description>
-本文主要涵盖了 Python 编程的核心知识（暂不包括标准库及第三方库，后续会发布相应专题的文章）。
-&lt;ol&gt;
-  &lt;li&gt;首先，按顺序依次展示了以下内容的一系列思维导图：&lt;strong&gt;基础知识，数据类型（数字，字符串，列表，元组，字典，集合），条件&amp;amp;循环，文件对象，错误&amp;amp;异常，函数，模块，面向对象编程&lt;/strong&gt;；&lt;/li&gt;
-  &lt;li&gt;接着，结合这些思维导图主要参考的资料，分享一下我的学习体验，一方面可供初学者参考，另一方面，也便于大家结合思维导图深入学习、理解、思考；&lt;/li&gt;
-  &lt;li&gt;最后，提供几篇文章链接，方便希望从 Python 2.x 迁移到 3.x 的朋友理解。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;strong&gt;笔者虽为一枚医学生，正是从学习 Python 起步，开启了数据科学新世界的大门。编程是这样一件美妙的事情，如果你没有开始，你不知道会错过一种多么棒的体验。Just try it~和大家共勉！&lt;/strong&gt;
-
-</description>
-        <pubDate>Tue, 13 Jun 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/06/13/python3-all/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/06/13/python3-all/</guid>
-        
-        <category>Python</category>
-        
-        
-        <category>编程之魅</category>
-        
-      </item>
-    
-      <item>
-        <title>【笔记】Python（八）常用扩展库</title>
-        <description>
-本文是对常用的 Python 扩展库的一个总结，主要以标准库为主，后续会随着进一步学习继续更新。
-
-</description>
-        <pubDate>Sun, 28 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/05/28/lib-1/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/28/lib-1/</guid>
-        
-        <category>Python</category>
-        
-        
-        <category>编程之魅</category>
-        
-      </item>
-    
-      <item>
-        <title>【实战】电商数据篇（二）MySQL 实战指南</title>
-        <description>
-&lt;strong&gt;本文是电商数据实战系列第二篇。&lt;/strong&gt;关于数据的情况，请参考&lt;a href=&quot;https://woaielf.github.io/2017/05/20/jdata-predeal/&quot;&gt;【实战】电商数据篇（一）数据初探&lt;/a&gt;。
-
-本篇中，我主要是为了解决以下的问题：
-&lt;ul&gt;
-  &lt;li&gt;MySQL 建表&lt;/li&gt;
-  &lt;li&gt;练习 SQL 查询：通过提问——解答的模式
-&lt;strong&gt;本文不是以解决数据模型问题为中心，更多的是对之前 SQL&amp;amp;MySQL 学习的演练。可以根据需要跳过部分章节，不影响后续数据处理的理解。&lt;/strong&gt;可通过&lt;a href=&quot;https://woaielf.github.io/2017/05/04/sql/&quot;&gt;【笔记】SQL &amp;amp; MySQL&lt;/a&gt; 回顾基础知识。&lt;/li&gt;
+        <title>使用 JavaScript 创建并下载文件</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#先上代码&quot; id=&quot;markdown-toc-先上代码&quot;&gt;先上代码&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+本文将介绍如何使用 JavaScript 创建文件，并自动/手动将文件下载。这在导出原始数据时会比较方便。
+
+&lt;h2 id=&quot;先上代码&quot;&gt;先上代码&lt;/h2&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;cm&quot;&gt;/**
+ * 创建并下载文件
+ * @param  {String} fileName 文件名
+ * @param  {String} content  文件内容
+ */&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;createAndDownloadFile&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;aTag&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;document&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createElement&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;blob&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Blob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;([&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;aTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;download&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;fileName&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;aTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;href&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;createObjectURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;aTag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;click&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;URL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;revokeObjectURL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;blob&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+很简单对吧，直接调用这个方法，传入文件名和文件内容，程序新建 a 标签，新建 Blob 对象，将文件名赋给 a 标签，同时将 Blob 对象作为 Url 也赋给 a 标签，模拟点击事件，自动下载成功，最后再回收内存。下面我们来看看具体是怎么操作的。
+
 </description>
-        <pubDate>Thu, 25 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/05/25/jdata-mysql/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/25/jdata-mysql/</guid>
+        <pubDate>Tue, 22 Nov 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/11/22/js-create-file-and-download/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/11/22/js-create-file-and-download/</guid>
         
-        <category>实例分析</category>
+        <category>文件</category>
+        
+        <category>下载</category>
+        
+        <category>JavaScript</category>
         
         
-        <category>数据科学</category>
+        <category>JavaScript</category>
         
       </item>
     
       <item>
-        <title>【实战】电商数据篇（一）数据初探</title>
+        <title>Fisher–Yates shuffle 洗牌算法</title>
         <description>
-&lt;strong&gt;本文是电商数据实战系列第一篇。&lt;/strong&gt;
-数据来源：&lt;a href=&quot;http://www.datafountain.cn/#/competitions/247/intro/&quot;&gt;京东JData算法大赛-高潜用户购买意向预测&lt;/a&gt;。数据集以京东商城真实的用户、商品和行为数据（脱敏后）为基础。一直苦于缺乏实践，正好拿这个项目练练手。接下来的几篇实战博文，我会尽可能仔细的写下一些体会，结合之前学习的数据分析工具（以Python及相关包为主），探索一下电商数据的世界。由于本人也是数据分析的小白，希望在实践中和大家一起成长。
+简单来说 Fisher–Yates shuffle 算法是一个用来将一个有限集合生成一个随机排列的算法（数组随机排序）。这个算法生成的随机排列是等概率的。同时这个算法非常高效。
+
+本文主要介绍这个算法的来源、演变、原理。并举出一个例子为大家清晰的描述每次迭代过程。最后使用 JavaScript 代码将算法实现。
+
+&lt;img src=&quot;https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Riffle_shuffle.jpg/320px-Riffle_shuffle.jpg&quot; alt=&quot;&quot; /&gt;
 
 </description>
-        <pubDate>Sat, 20 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/05/20/jdata-predeal/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/20/jdata-predeal/</guid>
+        <pubDate>Sun, 16 Oct 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/10/16/shuffle-algorithm/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/10/16/shuffle-algorithm/</guid>
         
-        <category>实例分析</category>
+        <category>算法</category>
+        
+        <category>shuffle</category>
+        
+        <category>乱序</category>
+        
+        <category>洗牌</category>
         
         
-        <category>数据科学</category>
+        <category>JavaScript</category>
         
       </item>
     
       <item>
-        <title>【笔记】SQL &amp; MySQL</title>
-        <description>
-这篇笔记包括了&lt;strong&gt;基本的 SQL 语法&lt;/strong&gt;，具体应用的 RDBMS 以 MySQL 为例，也会穿插一点点数据库的知识。最后讲了一下&lt;strong&gt;如何利用第三方库，结合 Python 使用 MySQL&lt;/strong&gt;。
+        <title>Git 如何 clone 非 master 分支的代码</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#问题描述&quot; id=&quot;markdown-toc-问题描述&quot;&gt;问题描述&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;问题描述&quot;&gt;问题描述&lt;/h2&gt;
+
+我们每次使用命令
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git clone git@gitlab.xxx.com:xxxxx.git
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+默认 clone 的是这个仓库的 master 分支。如果最新的代码不在 master 分支上，该如何拿到呢？如下图所示，最新的代码可能在&lt;code class=&quot;highlighter-rouge&quot;&gt;daily/1.4.1&lt;/code&gt;分支上，我们希望拿到这个分支上的代码。
 
 </description>
-        <pubDate>Thu, 04 May 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/05/04/sql/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/05/04/sql/</guid>
+        <pubDate>Thu, 07 Jul 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/07/07/git-clone-not-master-branch/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/07/07/git-clone-not-master-branch/</guid>
         
-        <category>SQL</category>
+        <category>Git</category>
         
-        <category>MySQL</category>
+        <category>GitHub</category>
+        
+        <category>分支</category>
         
         
-        <category>编程之魅</category>
+        <category>GitHub</category>
         
       </item>
     
       <item>
-        <title>【笔记】Python（七）数据可视化之「Matplotlib」</title>
+        <title>如何使用 babel</title>
         <description>
-Python 有非常丰富的第三方绘图库，matplotlib 使用起来也许并不是很便捷，因为图上每个元素都需要自己来定制。但仔细体会 matplotlib 背后的设计思想是很有趣的事情。seaborn 之类的绘图库是基于 matplotlib 封装的，因而后期需要自己灵活定制图形时就大大受用了。本文的两幅思维导图是基于两种不同的思路绘制的，偶有内容交叉，日常使用可以选择自己熟悉的方式（网上的教程大多是基于过程的函数式编程，即 pyplot 方法）。&lt;strong&gt;建议配合最后附上出的参考资料学习&lt;/strong&gt;。
+&lt;a href=&quot;https://babeljs.io/&quot;&gt;Babel&lt;/a&gt; 用于将 ES6 的代码转化为 ES5，使得 ES6 可以在目前的浏览器环境下使用。学习使用 babel 是为了使用 ES2015 做准备。本文将介绍如何使用 babel，以及一些相关的配置。
 
 </description>
-        <pubDate>Thu, 27 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/04/27/matplotlib/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/27/matplotlib/</guid>
+        <pubDate>Tue, 14 Jun 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/06/14/how-to-use-babel/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/14/how-to-use-babel/</guid>
         
-        <category>Python</category>
+        <category>ES2015</category>
         
-        <category>Matplotlib</category>
+        <category>ES6</category>
+        
+        <category>ES5</category>
+        
+        <category>babel</category>
         
         
-        <category>编程之魅</category>
+        <category>JavaScript</category>
         
       </item>
     
       <item>
-        <title>【笔记】Python（六）数值计算库之「Pandas」</title>
+        <title>JavaScript 语言精粹笔记3-方法、毒瘤等</title>
         <description>
-Pandas 提供了数据结构——DataFrame，可以高效的处理一些数据分析任务。我们日常分析的数据，大多是存储在类似 excel 的数据表中，Pandas 可以灵活的按列或行处理数据，几乎是最常用的工具了。
+记录一下阅读蝴蝶书的笔记，本篇为书中最后一部分：方法、代码风格、优美的特性、毒瘤、糟粕等。
 
 </description>
-        <pubDate>Sat, 22 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/04/22/Pandas/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/22/Pandas/</guid>
+        <pubDate>Fri, 10 Jun 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/06/10/JavaScript-good-parts-note3/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/10/JavaScript-good-parts-note3/</guid>
         
-        <category>Python</category>
+        <category>函数</category>
         
-        <category>Pandas</category>
+        <category>JavaScript</category>
         
         
-        <category>编程之魅</category>
+        <category>JavaScript</category>
         
       </item>
     
       <item>
-        <title>【笔记】Python（五）数值计算库之「NumPy」</title>
+        <title>JavaScript 语言精粹笔记2-继承、数组、正则表达式</title>
         <description>
-NumPy 主要提供了&lt;strong&gt;矢量化数组运算&lt;/strong&gt;的方法。通过将条件逻辑写成数组表达式，可以极大的简化代码（比如原先需要多个 if-else 分支循环才能实现的运算）。NumPy 的数据结构用于处理矩阵，是很多其他数值分析库的基础。
+记录一下阅读蝴蝶书的笔记，本篇为书中以下章节的笔记：继承、数组和正则表达式。
 
 </description>
-        <pubDate>Sat, 15 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/04/15/numpy/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/15/numpy/</guid>
+        <pubDate>Wed, 08 Jun 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/06/08/JavaScript-good-parts-note2/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/08/JavaScript-good-parts-note2/</guid>
         
-        <category>Python</category>
+        <category>继承</category>
         
-        <category>NumPy</category>
+        <category>对象</category>
+        
+        <category>原型</category>
+        
+        <category>Array</category>
+        
+        <category>正则</category>
         
         
-        <category>编程之魅</category>
+        <category>JavaScript</category>
         
       </item>
     
       <item>
-        <title>【笔记】机器学习（六）分类方法-理论篇</title>
+        <title>JavaScript 语言精粹笔记1-语法、对象、函数</title>
         <description>
-本文是我的「ML&amp;amp;DM 笔记」第六篇。应部分朋友的来信请求，先分享这部分与「分类」有关笔记。机器学习的这块知识体系非常庞大，部分知识可能深入不够，暂时仅供大家参考，我也还需要时间来更细致的学习。后续我会结合案例，单篇逐个进行讲解（可能需要的时间周期较长）。本文目前包括的理论包括&lt;strong&gt;决策树，规则分类器，最近邻方法，贝叶斯分类器，人工神经网络，支持向量机，集成学习以及不平衡类和多类问题&lt;/strong&gt;。
+记录一下阅读蝴蝶书的笔记，本篇为第一部分包含书中前三章内容：语法、对象和函数。
 
 </description>
-        <pubDate>Thu, 06 Apr 2017 00:00:00 +0800</pubDate>
-        <link>http://localhost:4000/2017/04/06/dm-6/</link>
-        <guid isPermaLink="true">http://localhost:4000/2017/04/06/dm-6/</guid>
+        <pubDate>Tue, 07 Jun 2016 00:00:00 +0800</pubDate>
+        <link>http://localhost:4000/2016/06/07/JavaScript-good-parts-note1/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/06/07/JavaScript-good-parts-note1/</guid>
         
-        <category>机器学习/数据挖掘</category>
+        <category>对象</category>
+        
+        <category>函数</category>
+        
+        <category>this</category>
+        
+        <category>闭包</category>
+        
+        <category>面向对象</category>
+        
+        <category>作用域</category>
         
         
-        <category>数据科学</category>
+        <category>JavaScript</category>
+        
+      </item>
+    
+      <item>
+        <title>浅谈正则表达式中的分组和引用</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#问题&quot; id=&quot;markdown-toc-问题&quot;&gt;问题&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+由正则表达式如何匹配相同字符出发，讲讲正则表达式中的选择、分组和引用。
+
+&lt;h2 id=&quot;问题&quot;&gt;问题&lt;/h2&gt;
+
+在外刊君读者群中看到有人提出这样的一个需求：
+
+&lt;blockquote&gt;
+  把字符串切成连续相同字符的正则怎么写？比如&lt;code class=&quot;highlighter-rouge&quot;&gt;abbcccdddd&lt;/code&gt;切成&lt;code class=&quot;highlighter-rouge&quot;&gt;a,bb,ccc,dddd&lt;/code&gt;
+&lt;/blockquote&gt;
+
+之前我对正则表达式也是略有研究，想尝试一下。其实我对正则表达式的学习基本完全来源于犀牛书的第10章，真正看懂这一章，我觉得操作正则表达式应该不在话下。
+
+</description>
+        <pubDate>Fri, 06 May 2016 11:40:18 +0800</pubDate>
+        <link>http://localhost:4000/2016/05/06/regular-expression-group/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/05/06/regular-expression-group/</guid>
+        
+        <category>正则</category>
+        
+        <category>分组</category>
+        
+        <category>Regular</category>
+        
+        
+        <category>JavaScript</category>
+        
+      </item>
+    
+      <item>
+        <title>对这个 jekyll 博客主题的改版和重构</title>
+        <description>
+本文主要说明对这个博客主题的改版和代码重构的过程。这个简洁高雅的博客主题受到了很多朋友的喜欢。在写第一版界面时，我对前端并不是很熟悉，对&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;也不熟悉。现在距离当时也一年了，对自己当时写的代码也不太满意了，同时&lt;code class=&quot;highlighter-rouge&quot;&gt;Jekyll&lt;/code&gt;如今也已经升级了，目前最新版为3.1.2。因此我在临近毕业尚未入职前做一下博客主题的代码重构和改版吧。
+
+主要想做这些事情有：添加归档，添加标签，添加分类页面，主页显示文章摘要，代码去除 jQuery 和 BootStrap，优化移动端显示，将所有变量写入配置文件&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt;中等。再优化一些细节吧。希望更多人会喜欢。
+
+</description>
+        <pubDate>Sat, 12 Mar 2016 11:40:18 +0800</pubDate>
+        <link>http://localhost:4000/2016/03/12/jekyll-theme-version-2.0/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/03/12/jekyll-theme-version-2.0/</guid>
+        
+        <category>jekyll</category>
+        
+        <category>端口</category>
+        
+        <category>markdown</category>
+        
+        <category>Foxit</category>
+        
+        <category>RubyGems</category>
+        
+        <category>HTML</category>
+        
+        <category>CSS</category>
+        
+        
+        <category>jekyll</category>
         
       </item>
     
